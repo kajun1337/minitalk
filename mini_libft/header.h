@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   header.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: muhozkan <muhozkan@student.42.tr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/26 10:26:46 by muhozkan          #+#    #+#             */
+/*   Updated: 2022/03/26 14:43:36 by muhozkan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef HEADER_H
+# define HEADER_H
+
+# include <signal.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
+# include <math.h>
+
+int		*mini_atoi(char *c);
+int		*ascii_byte(int c);
+int		byte_ascii(int *numbers);
+
+void	sig_handler(int signum, siginfo_t *siginfo, void *unused);
+void	sig_fback(int signum, siginfo_t *siginfo, void *unused);
+void	send_byte(int *byte, int pid);
+void	print_byte(int *numbers);
+void	idx_end(int *numbers, int *i, siginfo_t *siginfo);
+
+int		ussunu_alma(int nb, int power);
+int		ft_atoi(const char *str);
+size_t	ft_strlen(char *str);
+
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_bzero(void *s, int n);
+
+#endif
